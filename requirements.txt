@@ -2,3 +2,4 @@ numpy
 pillow
 tensorflow==2.15
 streamlit
+plotly
