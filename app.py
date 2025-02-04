@@ -40,7 +40,7 @@ if "data" not in st.session_state:
 if menu == "🏠 홈":
     st.title("🎭 AI 얼굴 분석")
     st.markdown("이 앱은 인공지능을 이용하여 얼굴 관상을 분석하는 앱입니다.")
-    st.image("https://files.oaiusercontent.com/file-JMTWgsp5b4NdfLcJQ46RoT?se=2025-02-04T12%3A40%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D5755cbcf-96e4-4250-a05c-f00abea7b1a8.webp&sig=5792YXc0iDElHpkNFeB1KdeObhchwlg6KXtexXoi2Tg%3D", caption="AI 기반 얼굴 분석", use_container_width=True)
+    st.image('image/입춘.png', caption="AI 기반 얼굴 분석", use_container_width=True)
     
 
 elif menu == "🔍 나는 무슨 관상일까?":
