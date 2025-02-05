@@ -67,6 +67,15 @@ elif menu == "🔍 나는 무슨 관상일까?":
 
                 top_class, top_confidence = sorted_results[0]
                 
+                # ✅ 관상 설명 추가
+                description = ""
+                if top_class == "강아지":
+                    description = "순한 인상을 갖고 있습니다."
+                elif top_class == "고양이":
+                    description = "고양이와 같은 매력적인 인상을 갖고 있습니다."
+                elif top_class == "돼지":
+                    description = "복스러운 인상을 갖고 있습니다."
+                
                 # ✅ CSV에 데이터 저장
                 new_data = pd.DataFrame([[time.strftime("%Y-%m-%d %H:%M:%S"), top_class, top_confidence]],
                                         columns=["날짜", "예측된 관상", "확률"])
@@ -80,6 +89,8 @@ elif menu == "🔍 나는 무슨 관상일까?":
                 st.plotly_chart(fig, use_container_width=True)
                 
                 st.success(f'🎉 당신은 **[{top_class}]** 상입니다! ({top_confidence:.1f}% 확률)')
+                if description:
+                    st.info(description)
             
             except Exception as e:
                 st.error(f"이미지 처리 중 오류 발생: {e}")
