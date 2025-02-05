@@ -88,9 +88,8 @@ elif menu == "🔍 나는 무슨 관상일까?":
                 st.subheader("📊 예측 결과")
                 st.plotly_chart(fig, use_container_width=True)
                 
-                st.success(f'🎉 당신은 **[{top_class}]** 상입니다! ({top_confidence:.1f}% 확률)')
-                if description:
-                    st.info(description)
+                # ✅ 결과 및 설명 출력
+                st.success(f'🎉 당신은 **[{top_class}]** 상입니다! ({top_confidence:.1f}% 확률) {description}')
             
             except Exception as e:
                 st.error(f"이미지 처리 중 오류 발생: {e}")
