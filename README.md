@@ -83,5 +83,5 @@ streamlit run app.py
 ```
 
 ---
-
+개발자 이메일 : vhzkflfltm6@gmail.com
 
