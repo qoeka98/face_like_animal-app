@@ -38,9 +38,9 @@ def run_ml():
     if df.empty:
         st.warning("📢 아직 저장된 데이터가 없습니다. 먼저 관상 분석을 진행하세요!")
     else:
-        # ✅ 누적 데이터 표시
+        # ✅ 누적 데이터 표시 (❌ 잘못된 `st.sort_indataframe()` 대신 `st.dataframe()` 사용)
         st.subheader("📋 분석 데이터")
-        st.sort_indataframe(df.head())
+        st.dataframe(df.head())  # ✅ 데이터를 정렬해서 표시하려면 `.sort_values()` 활용 가능
 
         # ✅ 관상별 개수 시각화
         count_data = df["예측된 관상"].value_counts().reset_index()
