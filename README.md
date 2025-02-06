@@ -83,6 +83,5 @@ streamlit run app.py
 ```
 
 ---
+개발자 이메일 : vhzkflfltm6@gmail.com
 
-## 🔥 **개발자 정보 & GitHub**
-📌 **개발자 GitHub**: [qoeka98](https://github.com/qoeka98/face_like_animal-app)  
