@@ -26,7 +26,7 @@ def run_home():
         st.markdown('''티쳐블 머신을 활용하여 관상 분석 모델을 학습시켰다.  
 적절한 학습량을 설정하기 위해 실험을 진행한 결과, **에포크 100은 학습이 충분하지 않았고, 200은 과적합으로 인해 오류가 발생**하였다. 따라서 최적의 학습량으로 **에포크 150을 설정**하였다.  
 
-학습 데이터는 **네이버 이미지와 구글 이미지에서 최소 45~50장씩 수집**하여 구성하였으며, 이를 **트레이닝(training)과 테스트(test) 데이터셋으로 분리하여 저장**하였다. 이후 해당 이미지를 활용하여 모델을 학습시켰다.  
+학습 데이터는 **네이버 이미지와 구글 이미지에서 최소 45~50장씩 수집**하여 구성하였으며, 이를 **트레이닝(training)과 테스트(test) 데이터셋으로'강아지상','고양이상','돼지상'세개의 클래스로  분리하여 저장**하였다. 이후 해당 이미지를 활용하여 모델을 학습시켰다.  
 
 완성된 모델은 **티쳐블 머신에서 내보낸 후, VS Code를 이용하여 활용할 수 있도록 구성**하였다.''')  
         st.write('')
@@ -48,10 +48,7 @@ def run_home():
         st.divider()
         st.write('')
         st.markdown('''
-                    사진출쳐:https://www.google.com/search?sca_esv=b71b87a039ad9bf1&sxsrf=AHTn8zpmna7qllmBxI166z1aeHuUw5mk4A:1738723799613&q=%EA%B0%95%EC%95%84%EC%A7%80%EC%83%81%EC%97%B0%EC%98%88%EC%9D%B8&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBpwxALD7bRaeOIZxqOFEngzB_O_LYSS4XXpaWwzVPCpGAm7zOmiX81RBvM6Jl5WVFTU8lMVsZqZi3IU8-OUPC-849zpywWzyFJoPFXz4gPBunfYrO5qbT5mEc2e_hxvEGkF—H1zOWJDXBbLgIqxF_SNtk6Y&sa=X&ved=2ahUKEwir1MDzwquLAxWqna8BHUQmLgwQtKgLegQIEBAB&biw=1745&bih=828&dpr=1.1
-
-사진출쳐:
-https://search.naver.com/search.naver?nso=so%3Ar%2Cp%3Aall&query=%EA%B3%A0%EC%96%91%EC%9D%B4%EC%83%81+%EC%97%B0%EC%98%88%EC%9D%B8&sm=tab_nmr&where=image
+                    사진출쳐:네이버와 구글에서 사진 가져옴
 ''')
         st.write('')
         st.divider()
