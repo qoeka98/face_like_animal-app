@@ -40,7 +40,7 @@ def run_ml():
     else:
         # ✅ 누적 데이터 표시
         st.subheader("📋 분석 데이터")
-        st.sort_indataframe(df.head(10))
+        st.sort_indataframe(df.head())
 
         # ✅ 관상별 개수 시각화
         count_data = df["예측된 관상"].value_counts().reset_index()
