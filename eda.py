@@ -48,11 +48,14 @@ def run_eda():
                 st.stop()
             
             try:
+                                # 이미지 전처리
                 image = ImageOps.fit(image, (224, 224), Image.Resampling.LANCZOS)
+                image = image.convert("RGB")  # RGB로 변환하여 3채널로 만듦
                 image_array = np.asarray(image)
                 normalized_image_array = (image_array.astype(np.float32) / 127.5) - 1
                 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
                 data[0] = normalized_image_array
+
 
                 prediction = model.predict(data)[0]  
                 sorted_indices = np.argsort(prediction)[::-1]  
